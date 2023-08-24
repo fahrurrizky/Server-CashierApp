@@ -8,15 +8,16 @@ const db = require("../models");
 
 const PORT = process.env.PORT || 8000;
 const app = express();
-app.use(
-  cors({
-    origin: [
-      process.env.WHITELISTED_DOMAIN &&
-        process.env.WHITELISTED_DOMAIN.split(","),
-      // "http://localhost:3000"
-    ],
-  })
-);
+app.use(cors({ origin: ["https://themajesticmixer.netlify.app/"] }));
+// app.use(
+//   cors({
+//     origin: [
+//       process.env.WHITELISTED_DOMAIN &&
+//         process.env.WHITELISTED_DOMAIN.split(","),
+//       // "http://localhost:3000"
+//     ],
+//   })
+// );
 
 app.use(express.json());
 // db.sequelize.sync({alter: true});
