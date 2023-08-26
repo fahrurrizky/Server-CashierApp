@@ -45,7 +45,7 @@ const createReport = {
         ],
         attributes: [
           'productId',
-          [db.Sequelize.fn('sum', db.Sequelize.col('transactionitem.quantity')), 'totalQuantity'],
+          [db.Sequelize.fn('sum', db.Sequelize.col('TransactionItem.quantity')), 'totalQuantity'],
         ],
         group: ['productId', 'Transaction.id'], // Menambahkan 'Transaction.id' ke dalam klausa GROUP BY
       });
