@@ -197,7 +197,7 @@ const userController = {
 async function sendEmail(email, token) {
     const templatePath = path.resolve(__dirname, "../emails/forgotPassword.html");
     const templateContent = await fs.promises.readFile(templatePath, "utf-8");
-    const html = templateContent.replace("{{redirect}}", `http://localhost:3000/reset-password/${token}`);
+    const html = templateContent.replace("{{redirect}}", `https://themajesticmixer.netlify.app/reset-password/${token}`);
 
     await transporter.sendMail({
         from: process.env.EMAIL_USER,
