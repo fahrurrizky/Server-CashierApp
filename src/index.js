@@ -8,7 +8,7 @@ const db = require("../models");
 
 const PORT = process.env.PORT || 8000;
 const app = express();
-app.use(cors({ origin: ["https://themajesticmixer.netlify.app"] }));
+app.use(cors({ origin: "*" }));
 // app.use(
 //   cors({
 //     origin: [
